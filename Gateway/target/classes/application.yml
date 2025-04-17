@@ -1,0 +1,51 @@
+spring:
+ main:
+  web-application-type: reactive 
+ application:
+  name: gateway
+ cloud:
+  gateway:
+   globalcors:
+    corsConfigurations:
+     '[/**]':
+      allowedOrigins: "http://localhost:4301"
+      allowedMethods: "*"
+      allowedHeaders: "*"
+      allowCredentials: true
+   routes:
+    - id: UserAuth
+      uri: http://localhost:9890
+      predicates:
+        - Path= /security/**
+      filters:
+       - AuthenticationFilter
+    - id: productmanagement
+      uri: http://localhost:8091
+      predicates:
+        - Path=/api/v1/inventory/**
+      filters:
+        - AuthenticationFilter
+    - id: Supplier
+      uri: http://localhost:9099
+      predicates: 
+        - Path=/supplier/**
+      filters:
+        - AuthenticationFilter
+    - id: InventoryTracking
+      uri: http://localhost:9090
+      predicates: 
+        - Path=/stockapi/**
+      filters:
+        - AuthenticationFilter
+    - id: orderManager
+      uri: http://localhost:9000
+      predicates: 
+        - Path=/orders/**,/alerts/**
+      filters:
+        - AuthenticationFilter
+
+
+eureka:
+ client:
+  service-url:
+   defaultZone: http://localhost:8761/eureka
