@@ -276,6 +276,4 @@ relevant data and performing actions.
 ● The system must prevent unauthorized access to sensitive data or actions outside the
 assigned roles.
 
-Source Code: Core Java Code
-Database Schema: Diagrams and structure for the MySQL database tables.
 
