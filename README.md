@@ -13,19 +13,9 @@ estimated delivery times.
 
 3. Order History:
 ○ Consumers can view past orders along with detailed delivery information.
-Weather and Location Integration
 
-1. Weather Data Integration:
-○ Using OpenWeatherMap API, weather forecasts are integrated into the system
-to provide insights into weather conditions affecting crop yields and delivery
-schedules.
+4. Alerts and Notiﬁcations:
 
-2. Location-Based Optimization:
-○ Geolocation data helps in optimizing delivery routes by considering traffic
-conditions, weather forecasts, and the distance between farmers, retailers, and
-consumers.
-
-3. Alerts and Notiﬁcations:
 ○ Weather-related delays and disruptions are communicated to users through
 SMS or email alerts, ensuring smooth management of the supply chain.
 
@@ -33,8 +23,10 @@ Database Architecture
 Tables Overview
 
 1. Users Table
+
 ○ Description: Stores information about users, including their role (farmer, retailer,
 consumer), authentication data, and personal details.
+
 ○ Columns:
 
 ■ user_id (PRIMARY KEY, AUTO_INCREMENT)
@@ -54,8 +46,10 @@ consumer), authentication data, and personal details.
 ■ updated_at (TIMESTAMP)
 
 3. Produce Table
+
 ○ Description: Contains information about the produce listed by farmers, including
 price, quantity, and delivery options.
+
 ○ Columns:
 
 ■ produce_id (PRIMARY KEY, AUTO_INCREMENT)
@@ -75,8 +69,10 @@ price, quantity, and delivery options.
 ■ updated_at (TIMESTAMP)
 
 5. Orders Table
+
 ○ Description: Manages orders placed by retailers, tracking order status and
 payment details.
+
 ○ Columns:
 
 ■ order_id (PRIMARY KEY, AUTO_INCREMENT)
@@ -99,8 +95,10 @@ payment details.
 ■ updated_at (TIMESTAMP)
 
 7. Inventory Table
+
 ○ Description: Tracks the available stock of produce listed by farmers. Updates in
 real-time based on orders.
+
 ○ Columns:
 
 ■ inventory_id (PRIMARY KEY, AUTO_INCREMENT)
@@ -112,8 +110,10 @@ real-time based on orders.
 ■ last_updated (TIMESTAMP)
 
 9. Delivery Table
+
 ○ Description: Manages logistics and delivery tracking, including shipment status
 and geolocation.
+
 ○ Columns:
 
 ■ delivery_id (PRIMARY KEY, AUTO_INCREMENT)
@@ -245,9 +245,12 @@ information, including receipts and payment status.
 Requirement:
 The system should provide real-time updates of inventory at various supply chain points.
 Acceptance Criteria:
+
 ● The inventory must automatically deplete when orders are placed or produce is
 delivered.
+
 ● Farmers and retailers should receive alerts for low stock or stock depletion.
+
 ● The system must handle backorder scenarios when stock levels are temporarily
 unavailable.
 
