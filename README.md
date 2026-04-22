@@ -1,5 +1,67 @@
 # BackendCapstoneProject
 
+Problem Statement:
+The agricultural supply chain often faces inefficiencies and waste, from overproduction to
+food spoilage. Farmers and consumers are often disconnected, which leads to food
+shortages, overpricing, and significant waste. There is a critical need for a real-time system
+that connects local farmers directly to consumers and retailers, enabling better
+optimization of the supply chain, reducing waste, and ensuring fair pricing for all stakeholders.
+
+Proposed Application Flow
+Registration and Authentication
+1. User Registration:
+○ Users (Farmers, Retailers, Consumers) register by providing unique login IDs,
+email addresses, and role-specific information.
+○ Roles include:
+
+■ Farmer: Manages produce listings and inventory.
+
+■ Retailer: Places orders and tracks produce.
+
+■ Consumer: Tracks orders and receives delivery updates.
+
+○ Users can reset passwords and securely log out of the system.
+Produce Listing (Farmer)
+
+1. Farmer Login:
+
+○ Farmers log in using their credentials to access the system.
+
+○ They can view their dashboard to manage produce listings.
+
+2. Adding Produce:
+
+○ Farmers input details for their produce, including:
+
+■ Produce Name
+
+■ Price
+
+■ Quantity
+
+■ Delivery Options
+
+○ The system provides real-time updates to inventory whenever a change is made
+(e.g., adding new produce or depleting stock).
+3. Editing Produce:
+
+○ Farmers have the ability to edit or remove their listings based on availability and
+demand.
+
+
+Placing Orders (Retailer)
+1. Retailer Login:
+○ Retailers log in to the system and navigate to the produce listings available from
+farmers.
+
+2. Order Placement:
+○ Retailers select the desired produce and place orders.
+○ The system automatically updates the inventory and triggers payment
+processing through integrated payment gateways (e.g., PayPal, Stripe).
+
+3. Order Confirmation:
+○ Retailers receive real-time confirmation of their orders once placed
+
 Tracking Orders (Consumer)
 
 1. Consumer Login:
