@@ -33,6 +33,7 @@ Setup Instructions
 API Endpoints
 
 InventoryTracking
+
 GET /stockapi/resources
 GET /stockapi/all
 GET /stockapi/id/{id}
@@ -53,6 +54,7 @@ DELETE /stockapi/sku/{sku}
 
 
 OrderManager
+
 GET /alerts/
 GET /orders
 GET /orders/{orderId}
@@ -64,6 +66,7 @@ PUT /orders/{orderId}
 DELETE /orders/{orderId}
 
 ProductManager
+
 GET /api/v1/inventory/products/all
 GET /api/v1/inventory/products/{id}
 GET /api/v1/inventory/products/sku/{sku}
@@ -78,6 +81,7 @@ DELETE /api/v1/inventory/products/{id}
 DELETE /api/v1/inventory/products/sku/{sku}
 
 Supplier
+
 GET /supplier
 GET /supplier/id/{id}
 GET /supplier/name/{name}
@@ -89,6 +93,7 @@ PUT /supplier/update/{id}
 DELETE /supplier/delete/{id}
 
 UserAuth
+
 GET /security/validate
 
 POST /security/register
